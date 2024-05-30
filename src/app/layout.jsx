@@ -1,6 +1,5 @@
-import Link from 'next/link';
+import Navigation from '@/components/Navigation';
 import ThemeWrapper from '@/components/ThemeWrapper';
-import ThemeToggler from '@/components/ThemeToggle';
 import './globals.css';
 
 export const metadata = {
@@ -16,24 +15,9 @@ export default function RootLayout({ children }) {
 		<html lang="en" suppressHydrationWarning>
 			<body>
 				<ThemeWrapper>
-					<section className="flex justify-between items-center">
-						{/* Logo */}
-						<img
-							className="bg-neutral-800 h-10 p-1 dark:bg-transparent"
-							src="/favicon.png"
-							alt="Icon"
-						/>
-
+					<section className="flex justify-center">
 						{/* Navigation link */}
-						<nav className="flex justify-center gap-2 text-lg text-gray-800 mt-7 mb-7 dark:text-neutral-300">
-							<Link href="/">Home</Link>
-							<Link href="/about">About</Link>
-							<Link href="/projects">Projects</Link>
-							<Link href="/contact">Contact me</Link>
-						</nav>
-
-						{/* Light/dark mode button */}
-						<ThemeToggler></ThemeToggler>
+						<Navigation></Navigation>
 					</section>
 
 					<main className="mt-16 dark:text-neutral-300">{children}</main>

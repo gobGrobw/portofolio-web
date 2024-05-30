@@ -13,6 +13,7 @@ export default function ThemeToggler() {
 		setMounted(true);
 	});
 
+	// Placeholder to load toggler
 	if (!mounted)
 		return (
 			<Image
@@ -31,7 +32,7 @@ export default function ThemeToggler() {
 			className=""
 			onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
 		>
-			{theme === 'dark' ? <FaSun /> : <IoMoonSharp />}
+			{theme === 'dark' ? <FaSun size={30} /> : <IoMoonSharp size={30} />}
 		</button>
 	);
 }

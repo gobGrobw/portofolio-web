@@ -3,26 +3,31 @@
 @tailwind utilities;
 
 :root {
-	--nav-btn-hover: ;
+	--nav-btn-hover: rgba(105, 105, 105, 0.2);
 }
 
 body {
 	height: 100vh;
+	box-sizing: border-box;
+	padding-left: 30vw;
+	padding-right: 30vw;
 }
 
-a {
+#layoutLink {
 	text-align: center;
 	padding: 5px 10px;
 	border-radius: 5px;
 	transition: 150ms ease-in-out;
 }
 
-a:hover {
-	background-color: rgba(105, 105, 105, 0.2);
+#layoutLink:hover {
+	background-color: var(--nav-btn-hover);
 }
 
-main,
-section {
-	padding-left: 30%;
-	padding-right: 30%;
+@media (max-width: 780px) {
+	body {
+		padding-left: 10vw;
+		padding-right: 10vw;
+	}
 }
+
