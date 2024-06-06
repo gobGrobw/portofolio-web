@@ -3,13 +3,13 @@ import { backEnd, frontEnd, misc } from '@/javascript/variables';
 
 export default function SkillsSection() {
 	return (
-		<section className="flex flex-wrap justify-center gap-15">
+		<section className="flex flex-wrap justify-center gap-15 tablet:flex-nowrap tablet:flex-col tablet:items-center">
 			{/* Front end */}
 			<Section title={'Front-End'}>
-				<ul className="flex flex-wrap items-center gap-y-5">
-					{frontEnd.map((skill) => {
+				<ul className="flex flex-wrap justify-center items-center gap-y-5">
+					{frontEnd.map((skill, i) => {
 						return (
-							<li className="flex flex-col items-center basis-4/12">
+							<li key={i} className="flex flex-col items-center basis-4/12">
 								<skill.component size={20} />
 								{skill.name}
 							</li>
@@ -21,9 +21,9 @@ export default function SkillsSection() {
 			{/* Back end */}
 			<Section title={'Back-End'}>
 				<ul className="flex flex-wrap justify-center items-center gap-y-5">
-					{backEnd.map((skill) => {
+					{backEnd.map((skill, i) => {
 						return (
-							<li className="flex flex-col items-center basis-4/12">
+							<li key={i} className="flex flex-col items-center basis-4/12">
 								<skill.component size={20} />
 								{skill.name}
 							</li>
@@ -35,9 +35,9 @@ export default function SkillsSection() {
 			{/* Misc */}
 			<Section title={'Miscellaneous'}>
 				<ul className="flex flex-wrap justify-center items-center gap-y-5">
-					{misc.map((skill) => {
+					{misc.map((skill, i) => {
 						return (
-							<li className="flex flex-col items-center basis-4/12">
+							<li key={i} className="flex flex-col items-center basis-4/12">
 								<skill.component size={20} />
 								{skill.name}
 							</li>

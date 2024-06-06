@@ -3,10 +3,8 @@ const frontEndIconConfig = {
 	CSS3: 'SiCss3',
 	JavaScript: 'SiJavascript',
 	React: 'SiReact',
-	Vuejs: 'SiVuedotjs',
 	Vite: 'SiVite',
 	Nextjs: 'SiNextdotjs',
-	Nuxtjs: 'SiNuxtdotjs',
 	TailwindCSS: 'SiTailwindcss',
 };
 
@@ -26,6 +24,7 @@ const miscIconConfig = {
 };
 
 function getIcons(config) {
+	// Get arrays of key and value and destructure it using .map()
 	return Object.entries(config).map(([name, componentName]) => {
 		const IconComponent = require('react-icons/si')[componentName];
 		return {

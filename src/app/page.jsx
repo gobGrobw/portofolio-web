@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Home() {
 	return (
-		<div className="mt-44">
+		<div className="mt-48">
 			<div className="mb-20">
 				{/* Title */}
 				<p className="text-3xl">Hello! I'm a</p>
@@ -12,7 +12,7 @@ export default function Home() {
 				{/* Small introduction */}
 				<p className="text-lg mb-10">
 					I am a Junior Web Developer from Indonesia. I make website using
-					frameworks such as ReactJS and VueJS
+					frameworks such as ReactJS and NextJS
 				</p>
 				{/* Button that links to /about page */}
 				<Link
